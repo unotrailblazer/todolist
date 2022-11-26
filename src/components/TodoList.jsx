@@ -1,11 +1,7 @@
 import React from "react";
-import { AiFillCheckCircle, AiFillEdit, AiOutlineDelete } from "react-icons/ai";
+import { AiFillCheckCircle, AiOutlineDelete } from "react-icons/ai";
 
-const TodoList = ({
-  todos,
-  setTodos,
-
-}) => {
+const TodoList = ({ todos, setTodos }) => {
   const handleCompleted = (todo) => {
     setTodos(
       todos.map((item) => {
@@ -14,11 +10,9 @@ const TodoList = ({
         }
       })
     );
-
-
   };
 
-  const handleDelete = ({id}) => {
+  const handleDelete = ({ id }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
