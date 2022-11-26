@@ -5,12 +5,7 @@ import Header from "./Header";
 import Form from "./Form";
 import TodoList from "./TodoList";
 
-const TodoListFull = ({
-  completedList,
-  setCompletedList,
-  pendingList,
-  setPendingList,
-}) => {
+const TodoListFull = () => {
   const [inputt, setInputt] = useState("");
   const [todos, setTodos] = useState([]);
 
@@ -25,20 +20,12 @@ const TodoListFull = ({
           setInputt={setInputt}
           todos={todos}
           setTodos={setTodos}
-          pendingList={pendingList}
-          setPendingList={setPendingList}
-          completedList={completedList}
-          setCompletedList={setCompletedList}
         />
       </div>
       <div>
         <TodoList
           todos={todos}
           setTodos={setTodos}
-          completedList={completedList}
-          setCompletedList={setCompletedList}
-          pendingList={pendingList}
-          setPendingList={setPendingList}
         />
       </div>
     </div>
